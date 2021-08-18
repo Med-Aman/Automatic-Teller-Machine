@@ -25,6 +25,6 @@ class AutoTellerMachineTest : StringSpec({
         val bankService = FakeBankingService(true)
         val atm = AutoTellerMachine(printer, bankService)
         atm.withdraw(0)
-        printer.message shouldBe "no a valid amount"
+        printer.message shouldBe "not a valid amount"
     }
 })
